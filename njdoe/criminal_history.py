@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from requests.models import HTTPError
 
 
 class ApprovalRecord:

@@ -104,7 +104,7 @@ class ApplicationHistory:
                 td_a = td.find("a")
                 if td_a:
                     a_href = td_a.attrs["href"]
-                    re_match = re.search("\d+", a_href)
+                    re_match = re.search(r"\d+", a_href)
                     td_index = re_match[0]
                     record_data.insert(0, td_index)
 
@@ -126,8 +126,8 @@ class ApplicationHistory:
         applications_data = []
         for ad in applications_data_list:
             application_record = {}
-            for l, d in enumerate(ad):
-                application_record[applications_headers_list_clean[l]] = d
+            for ix, d in enumerate(ad):
+                application_record[applications_headers_list_clean[ix]] = d
 
             applications_data.append(application_record)
 

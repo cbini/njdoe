@@ -1,18 +1,30 @@
-[tool.poetry]
+[project]
 name = "njdoe"
 version = "0.1.0"
 description = ""
-authors = ["Charlie Bini <cbini87@gmail.com>"]
+authors = [
+    {name = "Charlie Bini", email = "5003326+cbini@users.noreply.github.com"},
+]
+license-expression = "MIT"
+dependencies = [
+    "requests>=2.27.1",
+    "beautifulsoup4>=4.10.0",
+]
+requires-python = ">=3.9"
 
-[tool.poetry.dependencies]
-python = "^3.8"
-requests = "^2.26.0"
-beautifulsoup4 = "^4.10.0"
+[project.urls]
+Homepage = ""
 
-[tool.poetry.dev-dependencies]
-pytest = "^6.2"
-black = "^21.9b0"
+[project.optional-dependencies]
+[tool]
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=22.1.0",
+    "pytest>=7.1.0",
+    "flake8>=4.0.1",
+]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-pep517>=0.12.0"]
+build-backend = "pdm.pep517.api"
