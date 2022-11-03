@@ -1,3 +1,2 @@
-__version__ = '0.1.0'
-
+# trunk-ignore(flake8/F401)
 from . import certification, criminal_history
